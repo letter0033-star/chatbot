@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotebookLM으로 이동 중</title>
+    <!-- 1. Meta Refresh: 기본 리다이렉트 방식 (3초) -->
+    <meta http-equiv="refresh" content="3; url=https://notebooklm.google.com/notebook/10529a61-cc89-4d82-84c6-a2a6955819cd/preview">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        .progress-bar {
+            animation: progress 3s linear forwards;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 flex items-center justify-center min-h-screen font-sans">
+
+    <div class="max-w-md w-full p-8 bg-white rounded-2xl shadow-xl text-center border border-slate-100">
+        <!-- 로고 아이콘 -->
+        <div class="mb-6 flex justify-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18 18.246 18.477 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="text-2xl font-bold text-slate-800 mb-2">NotebookLM 연결</h1>
+        <p class="text-slate-500 mb-8 leading-relaxed">
+            지정된 노트북 미리보기 페이지로 안전하게 이동하고 있습니다. 잠시만 기다려 주세요.
+        </p>
+
+        <!-- 프로그레스 바 -->
+        <div class="w-full bg-slate-100 h-2 rounded-full mb-8 overflow-hidden">
+            <div class="progress-bar bg-blue-500 h-full rounded-full"></div>
+        </div>
+
+        <!-- 수동 링크 -->
+        <div class="space-y-4">
+            <a id="redirect-link" href="https://notebooklm.google.com/notebook/10529a61-cc89-4d82-84c6-a2a6955819cd/preview" 
+               class="inline-block w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-200 shadow-md">
+                지금 바로 이동하기
+            </a>
+            <p class="text-xs text-slate-400">
+                자동으로 이동하지 않는다면 위의 버튼을 클릭하세요.
+            </p>
+        </div>
+    </div>
+
+    <!-- 하단 푸터 -->
+    <div class="absolute bottom-8 text-slate-400 text-sm">
+        &copy; GitHub Pages Redirect Service
+    </div>
+
+    <script>
+        // 2. JavaScript 리다이렉트 보완: Meta 태그가 작동하지 않을 경우 대비
+        window.onload = function() {
+            const targetUrl = "https://notebooklm.google.com/notebook/10529a61-cc89-4d82-84c6-a2a6955819cd/preview";
+            setTimeout(function() {
+                window.location.href = targetUrl;
+            }, 3000);
+        };
+    </script>
+</body>
+</html>
