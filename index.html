@@ -23,15 +23,15 @@
         }
     </style>
 </head>
-<body class="bg-orange-50 font-sans flex flex-col min-h-screen overflow-hidden text-slate-900">
+<body class="bg-orange-50 font-sans flex flex-col min-h-screen text-slate-900">
 
-    <!-- 상단 영역: 연결 애니메이션 (화면의 약 1/3 차지) -->
-    <div class="h-[35vh] flex flex-col items-center justify-center p-6 bg-white border-b border-orange-100 shadow-sm z-10">
-        <div class="max-w-3xl w-full flex flex-row items-center gap-8">
+    <!-- 상단 영역: 연결 애니메이션 및 협의회 정보 -->
+    <div class="min-h-[35vh] flex flex-col items-center justify-center p-6 bg-white border-b border-orange-100 shadow-sm z-10">
+        <div class="max-w-4xl w-full flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
             <!-- 인사업무 상징 픽토그램 -->
             <div class="flex-shrink-0">
-                <div class="w-20 h-20 bg-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                         <circle cx="9" cy="7" r="4"></circle>
                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -41,16 +41,31 @@
             </div>
 
             <!-- 연결 메시지 및 프로그레스 바 영역 -->
-            <div class="flex-grow">
-                <h1 class="text-2xl font-extrabold text-slate-800 mb-1">2026년 교감 인사업무 챗봇 연결</h1>
-                <p class="text-slate-500 mb-4 text-sm font-medium">
+            <div class="flex-grow w-full text-center sm:text-left">
+                <!-- 타이틀과 협의회 명칭을 한 줄에 배치 (반응형) -->
+                <div class="flex flex-col md:flex-row md:items-center md:gap-3 mb-1">
+                    <h1 class="text-xl sm:text-2xl font-extrabold text-slate-800">2026년 교감 인사업무 챗봇 연결</h1>
+                    <div class="inline-block self-center md:self-auto px-2 py-1 bg-orange-100 text-orange-700 text-[10px] sm:text-xs font-bold rounded-md">
+                        강릉시 유·초등 교(원)감 협의회
+                    </div>
+                </div>
+                
+                <p class="text-slate-500 mb-4 text-xs sm:text-sm font-medium">
                     교원 인사업무 지원을 위한 전용 챗봇으로 안전하게 이동하고 있습니다.
                 </p>
                 
                 <!-- 시간 흐름 바 (Progress Bar) -->
-                <div class="w-full bg-orange-100 h-3 rounded-full overflow-hidden border border-orange-200 mb-3">
+                <div class="w-full bg-orange-100 h-3 rounded-full overflow-hidden border border-orange-200 mb-2">
                     <div class="progress-bar bg-amber-500 h-full rounded-full shadow-inner"></div>
                 </div>
+
+                <!-- 근거 자료 추가 요청 이메일 정보 -->
+                <p class="text-[10px] sm:text-xs text-slate-400 mb-4 flex items-center justify-center sm:justify-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    근거 자료 추가 요청: <span class="font-bold ml-1">letter0033@gmail.com</span>
+                </p>
 
                 <!-- 즉시 이동하기 버튼 -->
                 <a href="https://notebooklm.google.com/notebook/10529a61-cc89-4d82-84c6-a2a6955819cd/preview" 
@@ -61,49 +76,49 @@
         </div>
     </div>
 
-    <!-- 하단 영역: RAG 근거 법령 및 지침 (위계적 분류 배치) -->
-    <div class="h-[65vh] bg-orange-50/50 p-4 md:p-6 flex flex-col overflow-hidden">
-        <div class="max-w-6xl mx-auto w-full h-full flex flex-col">
+    <!-- 하단 영역: RAG 근거 법령 및 지침 -->
+    <div class="flex-grow md:h-[65vh] bg-orange-50/50 p-4 md:p-6 flex flex-col overflow-y-auto">
+        <div class="max-w-6xl mx-auto w-full flex flex-col">
             
-            <!-- 강조된 타이틀 섹션 -->
-            <div class="flex items-center justify-between mb-3">
-                <div class="bg-orange-600 text-white px-4 py-2 rounded-xl shadow-md inline-flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <!-- 배지와 버전 정보 -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-3 mb-5">
+                <div class="bg-amber-200 text-black px-6 py-3 rounded-2xl shadow-md border border-amber-300 flex items-center justify-center w-full md:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    <span class="text-xs md:text-sm font-extrabold tracking-tight">
-                        &lt;본 챗봇은 아래의 법령과 규정 및 지침으로 RAG(검색증강생성) 답변을 제공합니다&gt;
+                    <span class="text-sm md:text-base font-black tracking-tight text-center">
+                        본 챗봇은 아래의 법령과 규정 및 지침으로 검색증강생성(RAG) 답변을 제공합니다
                     </span>
                 </div>
-                <div class="hidden md:block text-[10px] font-bold text-orange-400 bg-white px-3 py-1 rounded-full border border-orange-100 shadow-sm">
-                    Hierarchy Data-Source Ver. 2026.03
+                <div class="flex-shrink-0 text-[11px] font-bold text-orange-600 bg-white px-4 py-2 rounded-full border border-orange-200 shadow-sm">
+                    법령 위계별 근거 자료 버전 2026.4월 기준
                 </div>
             </div>
             
-            <!-- 리스트 영역: 위계별 3단 그리드 -->
-            <div class="flex-grow bg-white rounded-2xl p-5 md:p-6 border border-orange-200 shadow-sm overflow-hidden flex flex-col">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-full text-[11px] md:text-[12px] leading-tight text-slate-700 font-medium">
+            <!-- 리스트 영역 -->
+            <div class="bg-white rounded-2xl p-5 md:p-6 border border-orange-200 shadow-sm flex flex-col mb-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 text-[12px] leading-tight text-slate-700 font-medium">
                     
                     <!-- 1열: 기본법 및 인사·임용 관련 -->
-                    <div class="flex flex-col space-y-2 border-r border-orange-50 pr-4">
+                    <div class="flex flex-col space-y-2 md:border-r md:border-orange-50 md:pr-4">
                         <h3 class="text-orange-600 font-bold border-b border-orange-100 pb-1 mb-1 flex items-center">
-                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1">1</span> 인사 및 기본 법령
+                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[10px]">1</span> 인사 및 기본 법령
                         </h3>
                         <p class="font-bold text-slate-900">• 교육기본법 / 초중등교육법</p>
                         <p class="font-bold text-slate-900">• 국가공무원법 / 지방공무원법 / 교육공무원법</p>
                         <p class="pl-2">• 교육공무원 임용령 / 승진규정</p>
                         <p class="pl-2">• 교육공무원 인사관리규정</p>
                         <p class="pl-2">• 강원특별자치도 교육공무원 인사관련 규정</p>
-                        <p class="pl-2">• 공무원 인사기록 및 인사사무 처리 규정(규칙)</p>
+                        <p class="pl-2">• 공무원 인사기록 및 인사사무 처리 규정</p>
                         <p class="pl-2">• 2026 교육공무원 인사실무편람 및 서식</p>
                         <p class="pl-2">• 강원 교육공무원 승진가산점 평정 기준</p>
                         <p class="pl-2">• 2026 강원 계약제교원 운영 지침 및 서식</p>
                     </div>
 
                     <!-- 2열: 복무·보수 및 징계 관련 -->
-                    <div class="flex flex-col space-y-2 border-r border-orange-50 px-4">
+                    <div class="flex flex-col space-y-2 md:border-r md:border-orange-50 md:px-4">
                         <h3 class="text-orange-600 font-bold border-b border-orange-100 pb-1 mb-1 flex items-center">
-                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1">2</span> 복무 · 보수 · 징계
+                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[10px]">2</span> 복무 · 보수 · 징계
                         </h3>
                         <p class="font-bold text-slate-900">• 국가 / 지방공무원 복무규정</p>
                         <p class="pl-2">• 교원 등의 연수에 관한 규정</p>
@@ -117,19 +132,18 @@
                     </div>
 
                     <!-- 3열: 교육활동 보호 및 행정 지원 -->
-                    <div class="flex flex-col space-y-2 pl-4">
+                    <div class="flex flex-col space-y-2 md:pl-4">
                         <h3 class="text-orange-600 font-bold border-b border-orange-100 pb-1 mb-1 flex items-center">
-                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1">3</span> 교육보호 및 학교행정
+                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[10px]">3</span> 교육보호 및 학교행정
                         </h3>
-                        <p class="font-bold text-slate-900">• 교원의 지위 향상 및 교육활동 보호 특별법</p>
+                        <p class="font-bold text-slate-900">• 교원의 지위 향상 및 보호 특별법</p>
                         <p class="pl-2">• 교원의 학생생활지도에 관한 고시 해설서</p>
                         <p class="pl-2">• 2026년 교육활동 보호 매뉴얼</p>
                         <p class="font-bold text-slate-900">• 아동학대처벌법 / 학교안전사고예방법</p>
                         <p class="font-bold text-slate-900">• 민원 처리에 관한 법률 / 개인정보보호법</p>
-                        <!-- 공공기록물 관리법 추가 -->
                         <p class="font-bold text-slate-900">• 공공기록물 관리에 관한 법률</p>
                         <p class="pl-2">• 공공기록물 관리법 시행령 / 시행규칙</p>
-                        <p class="pl-2">• 2026 학교행정 업무편람 / 학교회계 예산편성 지침</p>
+                        <p class="pl-2">• 2026 학교행정 업무편람 / 예산편성 지침</p>
                         <p class="pl-2">• 2026 교육중심 학교업무 최적화 추진 계획</p>
                         <p class="pl-2">• 강원교육청 단위학교 부서별 업무 기준안</p>
                         <p class="pl-2">• 교원역량개발지원제도 도입 방안</p>
@@ -138,15 +152,16 @@
                 </div>
             </div>
             
-            <div class="mt-3 flex flex-col md:flex-row items-center justify-between text-[10px] text-slate-400 font-medium space-y-1 md:space-y-0">
-                <p>&copy; 2026 교감 인사업무 지원 시스템 (RAG-Enabled)</p>
+            <!-- 푸터 영역 -->
+            <div class="mt-auto pb-6 flex flex-col md:flex-row items-center justify-between text-[10px] text-slate-400 font-medium space-y-2 md:space-y-0 text-center md:text-left">
+                <p>&copy; 2026 교감 인사업무 지원 시스템 (검색증강생성 기반)</p>
                 <p>본 데이터는 국가법령정보센터 및 도교육청 지침을 기반으로 체계화되었습니다.</p>
             </div>
         </div>
     </div>
 
     <script>
-        // JavaScript 리다이렉트 보완: 10초(10000ms) 설정
+        // 자바스크립트 리다이렉트 보완: 10초 설정
         window.onload = function() {
             const targetUrl = "https://notebooklm.google.com/notebook/10529a61-cc89-4d82-84c6-a2a6955819cd/preview";
             setTimeout(function() {
