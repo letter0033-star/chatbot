@@ -10,8 +10,8 @@
     <meta property="og:description" content="잠시 후 인사업무 지원 챗봇으로 연결됩니다.">
     <meta property="og:type" content="website">
     
-    <!-- 1. Meta Refresh: 기본 리다이렉트 방식 (10초 설정) -->
-    <meta http-equiv="refresh" content="10; url=https://notebooklm.google.com/notebook/10529a61-cc89-4d82-84c6-a2a6955819cd/preview">
+    <!-- 1. Meta Refresh: 기본 리다이렉트 방식 (60초 설정) -->
+    <meta http-equiv="refresh" content="60; url=https://notebooklm.google.com/notebook/10529a61-cc89-4d82-84c6-a2a6955819cd/preview">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes progress {
@@ -19,7 +19,8 @@
             100% { width: 100%; }
         }
         .progress-bar {
-            animation: progress 10s linear forwards;
+            /* 애니메이션 시간을 60초로 변경 */
+            animation: progress 60s linear forwards;
         }
     </style>
 </head>
@@ -51,7 +52,7 @@
                 </div>
                 
                 <p class="text-slate-500 mb-4 text-xs sm:text-sm font-medium">
-                    교원 인사업무 지원을 위한 전용 챗봇으로 안전하게 이동하고 있습니다.
+                    교원 인사업무 지원을 위한 전용 챗봇으로 안전하게 이동하고 있습니다. (약 1분 소요)
                 </p>
                 
                 <!-- 시간 흐름 바 (Progress Bar) -->
@@ -161,12 +162,12 @@
     </div>
 
     <script>
-        // 자바스크립트 리다이렉트 보완: 10초 설정
+        // 자바스크립트 리다이렉트 보완: 60초 설정
         window.onload = function() {
             const targetUrl = "https://notebooklm.google.com/notebook/10529a61-cc89-4d82-84c6-a2a6955819cd/preview";
             setTimeout(function() {
                 window.location.href = targetUrl;
-            }, 10000);
+            }, 60000); // 10000ms(10초)에서 60000ms(60초)로 변경
         };
     </script>
 </body>
