@@ -42,7 +42,6 @@
 
             <!-- 연결 메시지 및 프로그레스 바 영역 -->
             <div class="flex-grow w-full text-center sm:text-left">
-                <!-- 타이틀과 협의회 명칭 -->
                 <div class="flex flex-col md:flex-row md:items-center md:gap-3 mb-1">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-slate-800">2026년 교(원)감 인사업무 챗봇 연결</h1>
                     <div class="inline-block self-center md:self-auto px-2 py-1 bg-orange-100 text-orange-700 text-[10px] sm:text-xs font-bold rounded-md text-nowrap">
@@ -62,9 +61,9 @@
                 <!-- 근거 자료 추가 요청 이메일 정보 -->
                 <p class="text-[10px] sm:text-xs text-slate-400 mb-4 flex items-center justify-center sm:justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v10a2 2 0 002 2z" />
                     </svg>
-                    근거 자료 추가 요청: <span class="font-bold ml-1">letter0033@gmail.com</span>
+                    근거 자료 추가 요청: <span class="font-bold ml-1 text-slate-500">letter0033@gmail.com</span>
                 </p>
 
                 <!-- 즉시 이동하기 버튼 -->
@@ -80,7 +79,7 @@
     <div class="flex-grow md:h-[65vh] bg-orange-50/50 p-4 md:p-6 flex flex-col overflow-y-auto">
         <div class="max-w-[1400px] mx-auto w-full flex flex-col">
             
-            <!-- 배지 및 RAG 설명 영역 (왼쪽 정렬 정돈) -->
+            <!-- 배지 및 RAG 설명 영역 -->
             <div class="flex flex-col items-center mb-5">
                 <div class="inline-flex flex-col items-start gap-2 max-w-full">
                     <div class="flex flex-col md:flex-row items-center gap-3 w-full">
@@ -88,7 +87,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
-                            <span class="text-sm md:text-base font-black tracking-tight text-left">
+                            <span class="text-sm md:text-base font-black tracking-tight text-left leading-tight">
                                 본 챗봇은 아래의 법령과 규정 및 지침·업무편람을 기반으로 하여 검색증강생성(RAG) 답변을 제공합니다
                             </span>
                         </div>
@@ -97,7 +96,7 @@
                         </div>
                     </div>
                     
-                    <!-- RAG 설명 문구: 상단 배지 왼쪽 끝에 맞춤 -->
+                    <!-- RAG 설명 문구 -->
                     <div class="bg-orange-100/50 px-4 py-1.5 rounded-lg border border-orange-200/50 flex items-center gap-2 self-stretch md:self-start">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-orange-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -109,74 +108,72 @@
                 </div>
             </div>
             
-            <!-- 리스트 영역: 4단 그리드 -->
+            <!-- 리스트 영역: 동일 위계 4단 그리드 -->
             <div class="bg-white rounded-2xl p-4 md:p-6 border border-orange-200 shadow-sm flex flex-col mb-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 text-[11px] leading-tight text-slate-700 font-medium">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 text-[12px] leading-tight text-slate-700 font-bold">
                     
-                    <!-- 1열: 인사 및 기본 법령 -->
+                    <!-- 1열: 인사 및 임용 관리 -->
                     <div class="flex flex-col space-y-2 lg:border-r lg:border-orange-50 lg:pr-3">
-                        <h3 class="text-orange-600 font-bold border-b border-orange-100 pb-1 mb-1 flex items-center">
-                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[9px]">1</span> 인사 및 기본 법령
+                        <h3 class="text-orange-600 font-extrabold border-b border-orange-100 pb-1 mb-1 flex items-center">
+                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[9px]">1</span> 인사 및 임용 관리
                         </h3>
-                        <p class="font-bold text-slate-900">• 교육기본법 / 초중등교육법</p>
-                        <p class="font-bold text-slate-900">• 국가 / 지방 / 교육공무원법</p>
-                        <p class="pl-2">• 교육공무원 임용령 / 승진규정</p>
-                        <p class="pl-2">• 교육공무원 인사관리규정</p>
-                        <p class="pl-2">• 강원 교육공무원 인사관련 규정</p>
-                        <p class="pl-2">• 2026 교육공무원 인사실무편람</p>
-                        <p class="pl-2">• 2025 교육공무직원 업무편람</p>
-                        <p class="pl-2">• 2026 강원 계약제교원 운영 지침</p>
-                        <p class="pl-2">• 강원 교육공무원 승진가산점 평정</p>
+                        <p>• 교육기본법 / 초중등교육법</p>
+                        <p>• 교육공무원법 / 국가·지방공무원법</p>
+                        <p>• 교육공무원 임용령 / 승진규정</p>
+                        <p>• 교육공무원 인사관리규정</p>
+                        <p>• 강원 교육공무원 인사관련 규정</p>
+                        <p>• 2026 교육공무원 인사실무편람</p>
+                        <p>• 2025 교육공무직원 업무편람</p>
+                        <p>• 2026 강원 계약제교원 운영 지침</p>
+                        <p>• 강원 교육공무원 승진가산점 평정</p>
                     </div>
 
-                    <!-- 2열: 복무·보수 및 복지 관련 -->
+                    <!-- 2열: 복무 · 보수 · 복지 -->
                     <div class="flex flex-col space-y-2 lg:border-r lg:border-orange-50 lg:px-3">
-                        <h3 class="text-orange-600 font-bold border-b border-orange-100 pb-1 mb-1 flex items-center">
+                        <h3 class="text-orange-600 font-extrabold border-b border-orange-100 pb-1 mb-1 flex items-center">
                             <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[9px]">2</span> 복무 · 보수 · 복지
                         </h3>
-                        <p class="font-bold text-slate-900">• 국가 / 지방공무원 복무규정</p>
-                        <p class="pl-2">• 교원 등의 연수에 관한 규정</p>
-                        <p class="pl-2">• 공무원보수 / 수당 등에 관한 규정</p>
-                        <p class="pl-2">• 2026 공무원보수 업무지침</p>
-                        <p class="pl-2">• 2026 교원 성과상여금 지급 지침</p>
-                        <p class="font-bold text-slate-900">• 공무원연금법 / 시행령 / 규칙</p>
-                        <p class="font-bold text-slate-900">• 공무원 재해보상법률</p>
-                        <p class="font-bold text-slate-900">• 교육공무원 징계령 / 양정 규칙</p>
-                        <p class="pl-2">• 공무원 행동강령 / 공직자윤리법</p>
-                        <p class="pl-2">• 2026 갑질 근절 추진 계획</p>
+                        <p>• 공무원연금법 / 재해보상법</p>
+                        <p>• 공무원연금법 시행령 / 시행규칙</p>
+                        <p>• 국가 / 지방공무원 복무규정</p>
+                        <p>• 교원 등의 연수에 관한 규정</p>
+                        <p>• 공무원보수 / 수당 / 여비 규정</p>
+                        <p>• 교육공무원 징계령 / 양정 규칙</p>
+                        <p>• 공무원 행동강령 / 공직자윤리법</p>
+                        <p>• 2026 공무원보수 / 성과상여금 지침</p>
+                        <p>• 2026 갑질 근절 추진 계획</p>
                     </div>
 
-                    <!-- 3열: 교육보호 및 학생지원 -->
+                    <!-- 3열: 교육활동 및 학생보호 -->
                     <div class="flex flex-col space-y-2 lg:border-r lg:border-orange-50 lg:px-3">
-                        <h3 class="text-orange-600 font-bold border-b border-orange-100 pb-1 mb-1 flex items-center">
-                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[9px]">3</span> 교육보호 및 학생지원
+                        <h3 class="text-orange-600 font-extrabold border-b border-orange-100 pb-1 mb-1 flex items-center">
+                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[9px]">3</span> 교육활동 및 학생보호
                         </h3>
-                        <p class="font-bold text-slate-900">• 교원지위법(교육활동 보호)</p>
-                        <p class="font-bold text-slate-900">• 학교폭력예방 및 대책 법률</p>
-                        <p class="pl-2">• 2026 학교폭력 사안처리 가이드북</p>
-                        <p class="font-bold text-slate-900">• 학생맞춤통합지원법</p>
-                        <p class="pl-2">• 2026 교육활동 보호 매뉴얼</p>
-                        <p class="pl-2">• 교원 학생생활지도 고시 해설서</p>
-                        <p class="font-bold text-slate-900">• 아동학대처벌법 / 학교안전법</p>
-                        <p class="pl-2">• 학교안전사고 예방 및 보상 시행령</p>
-                        <p class="pl-2">• 교원역량개발지원제도 도입 방안</p>
+                        <p>• 교원지위법 / 학생맞춤통합지원법</p>
+                        <p>• 학교폭력예방 및 대책에 관한 법률</p>
+                        <p>• 아동학대처벌법 / 학교안전법</p>
+                        <p>• 학교안전사고 예방 및 보상 시행령</p>
+                        <p>• 2026 학교폭력 사안처리 가이드북</p>
+                        <p>• 2026 교육활동 보호 매뉴얼</p>
+                        <p>• 교원 학생생활지도 고시 해설서</p>
+                        <p>• 교원역량개발지원제도 도입 방안</p>
                     </div>
 
-                    <!-- 4열: 학교실무 및 행정지원 -->
+                    <!-- 4열: 학교실무 및 일반행정 -->
                     <div class="flex flex-col space-y-2 lg:pl-3">
-                        <h3 class="text-orange-600 font-bold border-b border-orange-100 pb-1 mb-1 flex items-center">
-                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[9px]">4</span> 학교실무 및 행정지원
+                        <h3 class="text-orange-600 font-extrabold border-b border-orange-100 pb-1 mb-1 flex items-center">
+                            <span class="bg-orange-100 px-1.5 py-0.5 rounded mr-1 text-[9px]">4</span> 학교실무 및 일반행정
                         </h3>
-                        <p class="font-bold text-slate-900">• 민원처리법 / 개인정보보호법</p>
-                        <p class="font-bold text-slate-900">• 공공기록물 관리에 관한 법률</p>
-                        <p class="pl-2">• 공공기록물 관리법 시행령 / 규칙</p>
-                        <p class="pl-2">• 2026 초등학교 학적 업무 매뉴얼</p>
-                        <p class="pl-2">• 2026 학교생활기록부 기재요령</p>
-                        <p class="pl-2">• 2026 강원늘봄학교 운영 길라잡이</p>
-                        <p class="pl-2">• 2025 학교정보화 업무편람</p>
-                        <p class="pl-2">• 2026 학교행정 업무편람</p>
-                        <p class="pl-2">• 2026 학교회계 예산편성 지침</p>
-                        <p class="pl-2">• 2026 학교업무 최적화 추진 계획</p>
+                        <p>• 민원처리법 / 개인정보보호법</p>
+                        <p>• 공공기록물 관리에 관한 법률</p>
+                        <p>• 공공기록물 관리법 시행령 / 시행규칙</p>
+                        <p>• 2026 학교생활기록부 기재요령</p>
+                        <p>• 2026 초등학교 학적 업무 매뉴얼</p>
+                        <p>• 2026 강원늘봄학교 운영 길라잡이</p>
+                        <p>• 2025 학교정보화 업무편람</p>
+                        <p>• 2026 학교행정 업무편람</p>
+                        <p>• 2026 학교회계 예산편성 지침</p>
+                        <p>• 2026 학교업무 최적화 추진 계획</p>
                     </div>
 
                 </div>
